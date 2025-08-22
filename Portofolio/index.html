@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakhri portfolio!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="image/gimbot.jpg">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Personal Portfolio</a>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="bx bx-menu"></i>
+        </div>
+        <!-- Hamburger Menu End-->
+
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">My Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- SECTION HOME -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hello!, I'm Fakhri Muhammad Ahza</h1>
+            <h3>Frontend Developer</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat dolor quos amet possimus quas. Aspernatur ipsa voluptatum beatae excepturi quisquam earum, totam dolor saepe, accusamus explicabo sit placeat incidunt exercitationem!</p>
+            <div class="btn-box">
+                <a href="#">Download Cv</a>
+            </div>
+        </div>
+
+        <div class="home-image">
+            <img src="image/Back.jpg" alt="Profile Picture" />
+        </div>
+
+
+        <div class="home-sci">
+            <a href="https://www.instagram.com/fakhrimahza/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://github.com/fakhriahza"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div>
+
+        <span class="home-imgHover"></span>
+    </section>
+
+    <!-- SECTION ABOUT -->
+    <section class="about" id="about">
+    <div class="about-image">
+        <img src="image/PantaiCemara.jpg" alt="About Me" />
+    </div>
+
+    <div class="about-content">
+        <h2>About Me</h2>
+        <h3>Let me introduce myself</h3>
+        <p>
+            Hi! I'm Fakhri Muhammad Ahza, a passionate Frontend Developer with a love for creating beautiful and functional web experiences. I enjoy turning complex problems into simple, elegant solutions. With a strong foundation in HTML, CSS, and JavaScript, I am always eager to learn new technologies and improve my skills.
+        </p>
+        
+        <div class="about-info">
+            <div><strong>Email:</strong> Fakhrimuhammad1571@gmail.com</div>
+            <div><strong>Location:</strong> Bandung, Indonesia</div>
+        </div>
+
+        <div class="about-buttons">
+          <a href="#projects" class="btn">My Projects</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
+      </div>
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section class="skills" id="skills">
+  <div class="skills-content">
+    <h2>My Skills</h2>
+    <p>Here are some of the technologies and tools I often use in my projects:</p>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class='bx bxl-html5'></i>
+        <h3>HTML5</h3>
+        <p>Building structured, semantic, and accessible layouts.</p>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-css3'></i>
+        <h3>CSS3</h3>
+        <p>Styling modern, responsive, and interactive web pages.</p>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-javascript'></i>
+        <h3>JavaScript</h3>
+        <p>Adding dynamic behavior and interactivity to websites.</p>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-react'></i>
+        <h3>React</h3>
+        <p>Creating reusable, fast, and scalable UI components.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+  <div class="projects-content">
+    <h2>My Projects</h2>
+    <p>Some of the work I've done recently:</p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="image/project1.jpg" alt="Project 1">
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>A responsive personal portfolio built with HTML, CSS, and JS.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="image/project2.jpg" alt="Project 2">
+        <div class="project-info">
+          <h3>E-commerce UI</h3>
+          <p>Modern e-commerce front-end design with product catalog.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="image/project3.jpg" alt="Project 3">
+        <div class="project-info">
+          <h3>Blog Platform</h3>
+          <p>A simple blog app prototype styled with responsive design.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <div class="contact-content">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me for collaborations or just a friendly hello 👋</p>
+
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Fakhri Muhammad Ahza. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
