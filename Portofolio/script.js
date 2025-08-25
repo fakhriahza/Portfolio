@@ -1,3 +1,4 @@
+// Menu toogle
 document.addEventListener("DOMContentLoaded", function() {
     const menuToggle = document.getElementById("menu-toggle");
     const navbar = document.getElementById("navbar");
@@ -22,3 +23,22 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// Scroll animation
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.reveal');
+
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 100; // seberapa jauh sebelum terlihat
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active');
+    }
+  }
+}
+
+window.addEventListener('scroll', revealOnScroll);
