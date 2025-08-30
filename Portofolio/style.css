@@ -692,6 +692,7 @@ body {
     .home-sci {
         position: static;
         margin-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
@@ -720,7 +721,7 @@ body {
         gap: 10px;
     }
     .btn-box a {
-        width: 100%;
+        width: 50%;
         font-size: 16px;
     }
 }
@@ -796,6 +797,10 @@ body {
 
     .navbar.active {
         right: 0;
+    }
+
+    .home-image {
+        display: none;
     }
 }
 
