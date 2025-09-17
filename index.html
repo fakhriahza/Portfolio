@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="image/gimbot.jpg">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Personal Portfolio</a>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="bx bx-menu"></i>
+        </div>
+        <!-- Hamburger Menu End-->
+
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">My Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- SECTION HOME -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hello!, I'm Fakhri Muhammad Ahza</h1>
+            <div class="text-animate">
+            <h3><span class="typing"></span></h3>
+            </div>
+            <p>Hello World! 🌍 <br> <br> I'm Fakhri, a frontend developer who enjoys blending design and code to create sleek, modern, and meaningful web experiences. Let's build something awesome together 🚀</p>
+            <div class="btn-box">
+                <a href="#">Download Cv</a>
+            </div>
+        </div>
+
+        <div class="home-image">
+            <img src="image/Back.jpg" alt="Profile Picture" />
+        </div>
+
+
+        <!-- <div class="home-sci">
+            <a href="https://www.instagram.com/fakhrimahza/"><i class='bx bxl-instagram'></i></a>
+            <a href="https://github.com/fakhriahza"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+        </div> -->
+
+        <span class="home-imgHover"></span>
+    </section>
+
+    <!-- SECTION ABOUT -->
+    <section class="about reveal" id="about">
+    <div class="about-image">
+        <img src="image/PantaiCemara.jpg" alt="About Me" />
+    </div>
+
+    <div class="about-content">
+        <h2>About Me</h2>
+        <h3>Let me introduce myself</h3>
+        <p>
+            Hi! I'm Fakhri Muhammad Ahza, a passionate Frontend Developer with a love for creating beautiful and functional web experiences. I enjoy turning complex problems into simple, elegant solutions. With a strong foundation in HTML, CSS, and JavaScript, I am always eager to learn new technologies and improve my skills.
+        </p>
+        
+        <div class="about-info">
+            <div><strong>Email:</strong> Fakhrimuhammad1571@gmail.com</div>
+            <div><strong>Location:</strong> Bandung, Indonesia</div>
+        </div>
+
+        <div class="about-buttons">
+          <a href="#projects" class="btn">My Projects</a>
+          <a href="#contact" class="btn secondary">Contact Me</a>
+      </div>
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section class="skills reveal" id="skills">
+  <div class="skills-content">
+    <h2>My Skills</h2>
+    <p>Here are some of the technologies and tools I often use in my projects:</p>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class='bx bxl-html5'></i>
+        <h3>HTML</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 78%;"></div>
+        </div>
+        <span class="percentage">78%</span>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-css3'></i>
+        <h3>CSS3</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 70%;"></div>
+        </div>
+        <span class="percentage">70%</span>
+      </div>
+      <div class="skill-card">
+        <i class='bx bxl-javascript'></i>
+        <h3>JavaScript</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 28%;"></div>
+        </div>
+        <span class="percentage">28%</span>
+      </div>
+      <div class="skill-card">
+        <i class="fa-brands fa-laravel"></i>
+        <h3>Laravel</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width: 48%;"></div>
+        </div>
+        <span class="percentage">48%</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects reveal" id="projects">
+  <div class="projects-content">
+    <h2>My Projects</h2>
+    <p>Some of the work I've done recently:</p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="image/Portfollio.png" alt="Project 1">
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>A responsive personal portfolio built with HTML, CSS, and JS.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="image/FormEskul.png" alt="Project 2">
+        <div class="project-info">
+          <h3>Form Eskul</h3>
+          <p>Modern e-commerce front-end design with product catalog.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="image/4llaset.png" alt="Project 3">
+        <div class="project-info">
+          <h3>Borrowing Asset <i>4llAset</i></h3>
+          <p>This Team Project a simple blog app prototype styled with responsive design.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact reveal" id="contact">
+  <div class="contact-content">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me for collaborations or just a friendly hello 👋</p>
+
+    <div class="contact-info">
+      <div class="contact-item">
+        <i class='bx bx-envelope'></i>
+        <div class="contact-details">
+          <h3>Email</h3>
+          <p>Fakhrimuhammad1571@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class='bx bx-map'></i>
+        <div class="contact-details">
+          <h3>Location</h3>
+          <p>Bandung, Indonesia</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <i class='bx bx-phone'></i>
+        <div class="contact-details">
+          <h3>Phone</h3>
+          <p>+62 123 4567 890</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-social">
+      <h3>Follow Me</h3>
+      <div class="social-links">
+        <a href="https://www.instagram.com/fakhrimahza/" target="_blank"><i class='bx bxl-instagram'></i></a>
+        <a href="https://github.com/fakhriahza" target="_blank"><i class='bx bxl-github'></i></a>
+        <a href="#" target="_blank"><i class='bx bxl-linkedin'></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Fakhri Muhammad Ahza. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
