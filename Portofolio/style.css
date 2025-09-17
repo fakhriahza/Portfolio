@@ -174,45 +174,10 @@ body {
     font-size: 32px;
     font-weight: 700;
     color: #00abf0;
-    overflow: hidden; /* Ensures the text is clipped */
-    white-space: nowrap; /* Prevents the text from wrapping */
-    border-right: 3px solid #00abf0; /* Cursor effect */
-    animation: typing 3s steps(20, end) forwards, blink-caret 0.75s step-end infinite;
+    overflow: visible; 
+    white-space: normal;
+    border-right: none;
 }
-
-/* Typing animation */
-@keyframes typing {
-    0% {
-        width: 0;
-        color: transparent;
-        border-color: #00abf0;
-    }
-    25% {
-        color: transparent;
-        border-color: #00abf0;
-    }
-    30% {
-        color: #00abf0;
-        border-color: #00abf0;
-    }
-    100% {
-        width: 100%;
-        color: #00abf0;
-        border-color: #00abf0;
-    }
-}
-
-/* Cursor blink animation */
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #00abf0;
-    }
-}
-
-
 
 
 .home-content p {
@@ -401,6 +366,34 @@ body {
     z-index: 100; 
 } */
 
+.typing {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.typing.frontend {
+  color: #00abf0; /* biru */
+}
+
+.typing.designer {
+  color: #22c55e; /* hijau */
+}
+
+.typing.learner {
+  color: #f97316; /* oranye */
+}
+
+.typing::after {
+  content: '|';
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
 /* Menu toggle (hamburger) */
 .menu-toggle {
     display: none;
@@ -538,6 +531,7 @@ body {
     border-radius: 12px;
     border: 2px solid rgba(0,171,240,0.2);
     transition: transform .3s ease, box-shadow .3s ease;
+    text-align: center;
 }
 
 .skill-card i {
@@ -548,13 +542,30 @@ body {
 
 .skill-card h3 {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #ededed;
 }
 
-.skill-card p {
-    font-size: 14px;
-    color: #bbb;
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(135deg, #00abf0, #0066ff);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.percentage {
+    font-size: 16px;
+    color: #00abf0;
+    font-weight: 600;
 }
 
 .skill-card:hover {
@@ -622,6 +633,7 @@ body {
     transform: translateY(-8px);
     box-shadow: 0 8px 25px rgba(0,171,240,0.3);
 }
+
 
 @keyframes showRight {
     100% {
@@ -765,7 +777,8 @@ body {
         flex-direction: column;
         align-items: flex-start;
         padding: 100px 5% 0 5%;
-        height: auto;
+        /* height: auto; */
+        max-height: 100vh;
     }
     .home-content {
         max-width: 100%;
