@@ -84,3 +84,28 @@ function typeEffect() {
 
 typeEffect();
 
+// Auto-scroll untuk skills section
+document.addEventListener("DOMContentLoaded", function () {
+  const skillsGrid = document.querySelector(".skills-grid");
+  let scrollAmount = 2; // kecepatan scroll (px)
+  let direction = 1; // 1 = kanan, -1 = kiri
+
+  function autoScroll() {
+    if (!skillsGrid) return;
+
+    skillsGrid.scrollLeft += scrollAmount * direction;
+
+    // kalau udah sampai ujung kanan -> balik ke kiri
+    if (skillsGrid.scrollLeft + skillsGrid.clientWidth >= skillsGrid.scrollWidth) {
+      direction = -1;
+    }
+    // kalau udah sampai ujung kiri -> balik ke kanan
+    else if (skillsGrid.scrollLeft <= 0) {
+      direction = 1;
+    }
+  }
+
+  setInterval(autoScroll, 20); // jalanin tiap 20ms
+});
+
+
