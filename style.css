@@ -21,7 +21,7 @@ body {background: #081b29; color: #ededed;}
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: transparent;
+    background: #081b29;;
     display: flex;
     justify-content: space-between;
     align-items: center;
