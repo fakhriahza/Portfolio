@@ -44,7 +44,6 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 
 // Typed text animation
-// Typed text animation
 const typingElement = document.querySelector(".typing");
 const words = [
   { text: "Frontend Developer", class: "frontend" },
@@ -87,7 +86,7 @@ typeEffect();
 // Auto-scroll untuk skills section
 document.addEventListener("DOMContentLoaded", function () {
   const skillsGrid = document.querySelector(".skills-grid");
-  let scrollAmount = 2; // kecepatan scroll (px)
+  let scrollAmount = 1; // kecepatan scroll (px)
   let direction = 1; // 1 = kanan, -1 = kiri
 
   function autoScroll() {
