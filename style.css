@@ -77,59 +77,30 @@ body {background: #081b29; color: #ededed;}
 /*  ============================ */
 .home {
     height: 100vh;
-    background: url('');
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10%;
-}
-
-.home-image {
-    width: 350px;
-    height: 350px;
+    /* background: linear-gradient(270deg, #00abf0, #081b29, #0066ff);
+    background-size: 600% 600%;
+    animation: gradientMove 12s ease infinite; */
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transform: scale(0.8) translateY(50px);
-    animation: imageEntrance 1.2s ease-out 0.5s forwards;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 10%;
 }
 
-@keyframes imageEntrance {
-    0% {
-        opacity: 0;
-        transform: scale(0.8) translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
+/* @keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+} */
 
-.home-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    opacity: 1;
-    border: 4px solid rgba(0,171,240,0.5);
-    box-shadow: 0 0 30px rgba(0,171,240,0.5);
-}
-.home-image img:hover{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    opacity: .7;
-    box-shadow: 0 4px 16px rgba(0, 171, 240, 0.5);
-}
-
-.home-content {max-width: 600px;}
+.home-content {max-width: 700px;}
 .home-content h1 {
     position: relative;
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 700;
     line-height: 1.2;
+    margin-bottom: 15px;
 }
 .home-content h1::before {
     content: '';
@@ -144,15 +115,16 @@ body {background: #081b29; color: #ededed;}
 }
 .home-content h3 {
     position: relative;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 700;
+    margin-bottom: 20px;
     color: #00abf0;
     overflow: visible; 
     white-space: normal;
     border-right: none;
 }
 
-.home-content p {position: relative; font-size: 16px; margin: 20px 0 40px;}
+.home-content p {position: relative; font-size: 16px; margin: 0 auto 30px auto; line-height: 1.6;}
 .home-content p::before {
     content: '';
     position: absolute;
@@ -221,43 +193,6 @@ body {background: #081b29; color: #ededed;}
 }
 .btn-box a:hover::before {width: 100%;}
 
-.home-sci {
-    position: absolute;
-    bottom: 40px;
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
-}
-.home-sci a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #00abf0;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #00abf0;
-    text-decoration: none;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-.home-sci a:hover {color: #081b29;}
-.home-sci a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #00abf0;
-    z-index: -1;
-    transition: .5s;
-}
-.home-sci a:hover::before {width: 100%;}
 .home-imgHover {
     position: absolute;
     top: 0;
@@ -282,6 +217,23 @@ body {background: #081b29; color: #ededed;}
   0%, 50% { opacity: 1; }
   50.01%, 100% { opacity: 0; }
 }
+
+/* Background Particles */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0; /* di belakang konten */
+}
+
+/* Pastikan konten home di depan */
+.home-content {
+    position: relative;
+    z-index: 1;
+}
+
 
 /*  ============================ */
 /*  ABOUT SECTION */
@@ -319,8 +271,6 @@ body {background: #081b29; color: #ededed;}
 .about-content h2 {font-size: 40px; color: #00abf0; margin-bottom: 10px;}
 .about-content h3 {font-size: 22px; margin-bottom: 20px; color: #bbb; font-weight: 500;}
 .about-content p {font-size: 17px; line-height: 1.7; margin-bottom: 25px;}
-.about-info {margin-bottom: 20px;}
-.about-info div {font-size: 16px; margin-bottom: 8px; color: #ccc;}
 
 /* tombol di about */
 .about-buttons {display: flex; gap: 15px;}
@@ -542,7 +492,6 @@ body {background: #081b29; color: #ededed;}
         max-height: 100vh;
     }
     .home-content {max-width: 100%; margin-bottom: 30px;}
-    .home-image {width: 250px; height: 250px; margin: 0 auto 30px auto;}
     .home-sci {position: static; margin-top: 20px; padding-bottom: 20px;}
 }
 
@@ -551,7 +500,6 @@ body {background: #081b29; color: #ededed;}
     .navbar a {margin-left: 15px; font-size: 16px;}
     .home-content h1 {font-size: 32px;}
     .home-content h3 {font-size: 20px;}
-    .home-image {width: 150px; height: 150px;}
     .btn-box {flex-direction: column; width: 100%; gap: 10px;}
     .btn-box a {width: 50%; font-size: 16px;}
 }
@@ -577,7 +525,9 @@ body {background: #081b29; color: #ededed;}
 
 /* Responsive navbar */
 @media (max-width: 768px) {
-    .menu-toggle {display: block;}
+    .header {flex-direction: row; justify-content: space-between; align-items: center;}
+    .logo {margin-right: auto;}
+    .menu-toggle {display: block; margin-left: auto; order: 2;}
     .navbar {
         position: fixed;
         top: 70px; /* tinggi header */
