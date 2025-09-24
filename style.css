@@ -98,10 +98,20 @@ body {background: #081b29; color: #ededed;}
 .home-content {position: relative; z-index: 1; max-width: 700px;}
 .home-content h1 {
     position: relative;
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 15px;
+    background: linear-gradient(90deg, #00abf0, #22c55e, #f97316, #ededed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradientFlow 6s ease infinite;
+}
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 .home-content h1::before {
     content: '';
@@ -157,42 +167,6 @@ body {background: #081b29; color: #ededed;}
     animation-delay: 1.9s;   
     z-index: 2; 
 }
-
-.btn-box a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: linear-gradient(135deg, #00abf0, #0066ff);
-    border: 2px solid #00abf0;
-    border-radius: 8px;
-    font-size: 19px;
-    color: #081b29;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-.btn-box a:hover {color: #00abf0; box-shadow: 0 5px 15px rgba(0,171,240,0.4);}
-.btn-box a:nth-child(2) {background: transparent; color: #00abf0;}
-.btn-box a:nth-child(2):hover {color: #081b29;}
-.btn-box a:nth-child(2)::before {background: #00abf0;}
-.btn-box a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #081b29;
-    z-index: -1;
-    transition: .5s;
-}
-.btn-box a:hover::before {width: 100%;}
 
 .home-imgHover {
     position: absolute;
@@ -262,7 +236,7 @@ body {background: #081b29; color: #ededed;}
     width: 280px;
     height: 280px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 20%;
     border: 6px solid rgba(0, 171, 240, 0.4);
     box-shadow: 0 0 30px rgba(0, 171, 240, 0.4);
     transition: transform .4s ease;
@@ -301,7 +275,7 @@ body {background: #081b29; color: #ededed;}
 }
 
 .skills h2 {font-size: 40px; color: #00abf0; margin-bottom: 20px;}
-.skills p {color: #bbb; margin-bottom: 40px;}
+.skills p {color: #bbb; margin: 40px 0;}
 .skills-grid {
     display: flex;
     /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  */
@@ -493,7 +467,6 @@ body {background: #081b29; color: #ededed;}
         max-height: 100vh;
     }
     .home-content {max-width: 100%; margin-bottom: 30px;}
-    .home-sci {position: static; margin-top: 20px; padding-bottom: 20px;}
 }
 
 @media (max-width: 600px) {
@@ -501,8 +474,6 @@ body {background: #081b29; color: #ededed;}
     .navbar a {margin-left: 15px; font-size: 16px;}
     .home-content h1 {font-size: 32px;}
     .home-content h3 {font-size: 20px;}
-    .btn-box {flex-direction: column; width: 100%; gap: 10px;}
-    .btn-box a {width: 50%; font-size: 16px;}
 }
 
 /* Responsive untuk About section */

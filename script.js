@@ -1,4 +1,6 @@
-// Menu toggle
+// ================================
+// Menu Toogle
+// ================================
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menu-toggle");
   const navbar = document.getElementById("navbar");
@@ -24,7 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// ================================
 // Scroll animation
+// ================================
 function revealOnScroll() {
   const reveals = document.querySelectorAll(".reveal");
 
@@ -42,7 +46,9 @@ function revealOnScroll() {
 }
 window.addEventListener("scroll", revealOnScroll);
 
+// ================================
 // Typed text animation
+// ================================
 const typingElement = document.querySelector(".typing");
 const words = [
   { text: "Frontend Developer", class: "frontend" },
@@ -133,7 +139,9 @@ document.addEventListener("DOMContentLoaded", function () {
   startAutoScroll();
 });
 
+// ================================
 // Particle Background
+// ================================
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 
